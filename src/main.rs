@@ -1,22 +1,17 @@
 use std::time::SystemTime;
-use std::io;
 mod fibs;
+mod utils;
 
 fn main() { 
-    let n = get_n();
-
+    let n = utils::get_n();
+    
     let start = SystemTime::now(); 
     fibs::fib_loop(n);
     let end = SystemTime::now();
-    let diff = end.duration_since(start).expect("...");
     
-    println!("time {:?} to calculate the fibonacci of {}", diff, n);
-}
-
-fn get_n() -> u64 {
-    let mut string_number = String::new();
-    println!("Please input a number:");
-    io::stdin().read_line(&mut string_number).expect("Nothing to read..");
-    let n = string_number.trim().parse::<u64>().unwrap();
-    n
+    println!(
+        "time {:?} to calculate the fibonacci of {}", 
+        end.duration_since(start).expect("..."), 
+        n
+    );
 }
