@@ -4,10 +4,12 @@ mod fibs;
 
 fn main() { 
     let n = get_n();
+
     let start = SystemTime::now(); 
     fibs::fib_loop(n);
     let end = SystemTime::now();
     let diff = end.duration_since(start).expect("...");
+    
     println!("time {:?} to calculate the fibonacci of {}", diff, n);
 }
 

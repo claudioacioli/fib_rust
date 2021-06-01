@@ -1,10 +1,10 @@
-pub fn fib(n: u64) -> u64 {
-    if n < 2 {
-        n
-    } else {
-        fib(n - 1) + fib(n - 2)
-    }
-}
+//pub fn fib(n: u64) -> u64 {
+//    if n < 2 {
+//        n
+//    } else {
+//        fib(n - 1) + fib(n - 2)
+//    }
+//}
 
 pub fn fib_loop(n: u64) -> u64 {
     let mut i = 0;
