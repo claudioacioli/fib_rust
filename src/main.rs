@@ -8,7 +8,7 @@ fn main() {
     println!("time: {:?}", diff);
 }
 
-fn fib(n: u32) -> u32 {
+fn fib(n: u128) -> u128 {
     if n < 2 {
         n
     } else {
