@@ -1,12 +1,12 @@
-//pub fn fib(n: u64) -> u64 {
-//    if n < 2 {
-//        n
-//    } else {
-//        fib(n - 1) + fib(n - 2)
-//    }
-//}
+pub fn r_fib(n: u128) -> u128 {
+   if n < 2 {
+       n
+   } else {
+       r_fib(n - 1) + r_fib(n - 2)
+   }
+}
 
-pub fn fib_loop(n: u64) -> u64 {
+pub fn l_fib(n: u128) -> u128 {
     let mut i = 0;
     let mut x = 1;
     let mut y = 0;
