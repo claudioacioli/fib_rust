@@ -14,6 +14,7 @@ pub fn compare (f: fn(u128) -> u128, n:u128) {
     let start = SystemTime::now();
     f(n);
     let end = SystemTime::now();
+
     println!(
         "time {:?} to calculate the fibonacci of {}",
         end.duration_since(start).expect("..."),

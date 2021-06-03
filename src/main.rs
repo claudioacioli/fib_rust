@@ -1,7 +1,7 @@
 mod fibs;
 mod utils;
 
-fn main() { 
+fn main() {
     let n = utils::get_n();
 
     println!("Fibonacci loop:");

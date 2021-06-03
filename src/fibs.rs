@@ -11,11 +11,13 @@ pub fn l_fib(n: u128) -> u128 {
     let mut x = 1;
     let mut y = 0;
     let mut aux;
+
     while i < n {
         aux = x + y;
         y = x;
         x = aux;
         i = i + 1;
     }
+    
     x
 }
