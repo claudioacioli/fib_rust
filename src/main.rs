@@ -3,11 +3,11 @@ mod utils;
 
 fn main() {
     println!("Please input a number:");
-    let n:u128 = utils::get_n();
+    let n:u128 = utils::get_number();
 
     println!("Fibonacci loop:");
-    utils::compare(fibs::l_fib, n);
+    utils::evaluate(fibs::loop_fib, n);
 
     println!("\nFibonacci recursive:");
-    utils::compare(fibs::r_fib, n);
+    utils::evaluate(fibs::recursive_fib, n);
 }
