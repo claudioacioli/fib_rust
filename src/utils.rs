@@ -1,6 +1,6 @@
 use std::io;
 use std::str::FromStr;
-use std::time::SystemTime;
+use std::time::{SystemTime, Duration};
 
 pub fn get_number() -> u128 {
     let mut number:String = String::new();
@@ -9,14 +9,18 @@ pub fn get_number() -> u128 {
 //    return number.trim().parse::<u128>().unwrap_or(0);
 }
 
-pub fn evaluate(f: fn(u128) -> u128, n:u128) {
+pub fn evaluate(f: fn(u128) -> u128, n:u128) -> Duration {
     let start = SystemTime::now();
     f(n);
     let end = SystemTime::now();
+    end.duration_since(start).expect("...")
+}
 
+pub fn show_results (title:&str, number:&u128, duration:&Duration) {
     println!(
-        "time {:?} to calculate the fibonacci of {}",
-        end.duration_since(start).expect("..."),
-        n
+        "{}\ntime {:?} to calculate the fibonacci of {}",
+        &title,
+        &duration,
+        &number
     );
 }
